@@ -1,9 +1,0 @@
-C:\Users\mkargaltsev\source\repos\ExchangeWithUTM\ExchangeWithUTM\bin\Debug\ExchangeWithUTM.exe.config
-C:\Users\mkargaltsev\source\repos\ExchangeWithUTM\ExchangeWithUTM\bin\Debug\ExchangeWithUTM.exe
-C:\Users\mkargaltsev\source\repos\ExchangeWithUTM\ExchangeWithUTM\bin\Debug\ExchangeWithUTM.pdb
-C:\Users\mkargaltsev\source\repos\ExchangeWithUTM\ExchangeWithUTM\bin\Debug\UTM_Interchange.dll
-C:\Users\mkargaltsev\source\repos\ExchangeWithUTM\ExchangeWithUTM\bin\Debug\UTM_Interchange.pdb
-C:\Users\mkargaltsev\source\repos\ExchangeWithUTM\ExchangeWithUTM\obj\Debug\ExchangeWithUTM.csproj.CoreCompileInputs.cache
-C:\Users\mkargaltsev\source\repos\ExchangeWithUTM\ExchangeWithUTM\obj\Debug\ExchangeWithUTM.csproj.CopyComplete
-C:\Users\mkargaltsev\source\repos\ExchangeWithUTM\ExchangeWithUTM\obj\Debug\ExchangeWithUTM.exe
-C:\Users\mkargaltsev\source\repos\ExchangeWithUTM\ExchangeWithUTM\obj\Debug\ExchangeWithUTM.pdb
