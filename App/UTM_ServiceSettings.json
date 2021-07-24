@@ -1,0 +1,5 @@
+{
+  "ConnectionString": "Server=localhost\\SQLEXPRESS;Database=UTM;Trusted_Connection=True;",
+  "SqlCommandTimeout": 25,
+  "GetSettingProcedure": "[srv].[GetSettings]"
+}
