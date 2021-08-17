@@ -12,17 +12,19 @@ using UTM_ExchangeLibrary.Interfaces;
 
 namespace UTM_ExchangeLibrary
 {
-    public class UTM_ServiceSettings : UTM_Object
+    public class UTM_ServiceSettings : IUTM_ServiceSettings
     {
         protected IDictionary<string, string> ServiceSettings;
         protected string JSONSettingsPath { get; set; }
-        public string ConnectionString { get; set; }
-        public int SqlCommandTimeout { get; set; }
+        protected string ConnectionString { get; set; }
+        protected int SqlCommandTimeout { set; get;  }
         protected string GetSettingProcedure { get; set; }
-        public UTM_ServiceSettings(string jsonSettingsPath)
+        protected IUTM_Log Log;
+        public UTM_ServiceSettings(string jsonSettingsPath, IUTM_Log log)
         {
-            this.JSONSettingsPath = jsonSettingsPath;
+            JSONSettingsPath = jsonSettingsPath;
             ServiceSettings = new Dictionary<string, string>();
+            Log = log;
 
             GetServiceSettings();
         }
@@ -34,18 +36,29 @@ namespace UTM_ExchangeLibrary
             SqlCommandTimeout = JSONServiceSettings.SqlCommandTimeout;
             GetSettingProcedure = JSONServiceSettings.GetSettingProcedure;
 
+            ServiceSettings.Add("ConnectionString", ConnectionString);
+            ServiceSettings.Add("SqlCommandTimeout", Convert.ToString(SqlCommandTimeout));
+
             GetSettings();
         }
         protected UTM_JSONServiceSettings GetJSONSettings(string serviceSettingsPath)
         {
-            string jsonString = File.ReadAllText(serviceSettingsPath);
+            try
+            {
+                string jsonString = File.ReadAllText(serviceSettingsPath);
 
-            if (!string.IsNullOrWhiteSpace(jsonString))
-            {
-                return JsonSerializer.Deserialize<UTM_JSONServiceSettings>(jsonString);
+                if (!string.IsNullOrWhiteSpace(jsonString))
+                {
+                    return JsonSerializer.Deserialize<UTM_JSONServiceSettings>(jsonString);
+                }
+                else
+                {
+                    return null;
+                }
             }
-            else
+            catch (Exception ex)
             {
+                Log.LogException(ex);
                 return null;
             }
         }
@@ -54,9 +67,18 @@ namespace UTM_ExchangeLibrary
             if (!string.IsNullOrWhiteSpace(ConnectionString))
             {
                 IUTM_DBCommand GetSettingsCommand = new UTM_SQLServerCommand();
-                GetSettingsCommand.BuildCommand(ConnectionString, GetSettingProcedure, SqlCommandTimeout);
+                GetSettingsCommand.BuildCommand(this, GetSettingProcedure, Log);
 
-                ServiceSettings = GetSettingsCommand.Exec()[0].Data;
+                try
+                {
+                    ServiceSettings = ServiceSettings
+                                        .Union(GetSettingsCommand.Exec()[0].Data)
+                                        .ToDictionary(s => s.Key, s => s.Value);
+                }
+                catch (Exception ex)
+                {
+                    Log.LogException(ex);
+                }
             }
         }
         public string GetServiceSetting(string settingName) 

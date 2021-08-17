@@ -9,7 +9,7 @@ namespace UTM_ExchangeLibrary.Interfaces
 {
     public interface IUTM_DBCommand
     {
-        void BuildCommand(string connectionString, string procedureName, int commandTimeout);
+        void BuildCommand(IUTM_ServiceSettings serviceSettings, string sqlExpression, IUTM_Log log);
         void AddCommandParameter(string parameterName, string value);
         List<UTM_ExecutedCommandData> Exec();
     }

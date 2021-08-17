@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UTM_ExchangeLibrary.Interfaces;
 
 namespace UTM_ExchangeLibrary
 {
@@ -11,12 +12,12 @@ namespace UTM_ExchangeLibrary
     {
         private UTM_ServiceSettings ServiceSettings { get; }
         private static UTM_ServiceSettingsBuilder ServiceSettingsBuilder;
-        protected UTM_ServiceSettingsBuilder(string JSONSettingsPath)
+        protected UTM_ServiceSettingsBuilder(string JSONSettingsPath, IUTM_Log log)
         {
-            ServiceSettings = new UTM_ServiceSettings(JSONSettingsPath);
+            ServiceSettings = new UTM_ServiceSettings(JSONSettingsPath, log);
         }
 
-        public static UTM_ServiceSettings GetServiceSettings()
+        public static UTM_ServiceSettings GetServiceSettings(IUTM_Log log)
         {
             if (ServiceSettingsBuilder == null)
             {
@@ -24,7 +25,7 @@ namespace UTM_ExchangeLibrary
 
                 if (!string.IsNullOrWhiteSpace(JSONSettingsPath))
                 {
-                    ServiceSettingsBuilder = new UTM_ServiceSettingsBuilder(JSONSettingsPath);
+                    ServiceSettingsBuilder = new UTM_ServiceSettingsBuilder(JSONSettingsPath, log);
                 }
             }
 

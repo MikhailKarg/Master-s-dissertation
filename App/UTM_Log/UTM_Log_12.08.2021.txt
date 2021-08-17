@@ -1,0 +1,15 @@
+﻿******************** 12.08.2021 7:37:41 ********************
+Debug:
+Exception Type: System.InvalidOperationException
+Exception: Свойство ConnectionString не инициализировано.
+Source: System.Data
+Stack Trace: 
+   в System.Data.SqlClient.SqlConnection.PermissionDemand()
+   в System.Data.SqlClient.SqlConnectionFactory.PermissionDemand(DbConnection outerConnection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 57
+

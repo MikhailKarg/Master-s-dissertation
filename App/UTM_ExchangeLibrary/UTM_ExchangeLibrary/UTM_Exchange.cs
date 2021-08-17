@@ -4,123 +4,131 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UTM_ExchangeLibrary.DBMappers;
+using UTM_ExchangeLibrary.Interfaces;
 using UTM_ExchangeLibrary.XMLParsers;
 
 namespace UTM_ExchangeLibrary
 {
     public class UTM_Exchange
     {
-        protected UTM_ServiceSettings Settings;
-
-        protected string ConnectionString;
-        protected int SqlCommandTimeout;
+        protected IUTM_ServiceSettings Settings;
+        protected IUTM_Log Log;
         protected int HTTPTimeout;
-
-        protected string GetUTMExpression;
-        public UTM_Exchange(UTM_ServiceSettings settings)
+         
+        public UTM_Exchange(IUTM_ServiceSettings settings, IUTM_Log log)
         {
             Settings = settings;
+            Log = log;
 
-            ConnectionString = Settings.ConnectionString;
-            SqlCommandTimeout = Settings.SqlCommandTimeout;
-            HTTPTimeout = Convert.ToInt32(Settings.GetServiceSetting("HTTPTimeout"));
-
-            GetUTMExpression = Settings.GetServiceSetting("proc_GetUTM");
+            HTTPTimeout = Convert.ToInt32(Settings.GetServiceSetting("HTTPTimeout"));        
         }
-        protected void Get()
+        protected void Get(UTM utm)
         {
             try
             {
                 string pathToDataFromUTM = Settings.GetServiceSetting("PathToDataFromUTM");
-                string utm_DataInsertExpression = Settings.GetServiceSetting("proc_UTM_DataInsert");
 
-                if (!string.IsNullOrWhiteSpace(pathToDataFromUTM)
-                    & !string.IsNullOrWhiteSpace(utm_DataInsertExpression))
+                if (!string.IsNullOrWhiteSpace(pathToDataFromUTM))
                 {
-                    List<UTM> utmServers = UTMMapper.GetUTMServers(ConnectionString, GetUTMExpression, SqlCommandTimeout);
+                    string dataListURL = utm.IP + pathToDataFromUTM;
+                    string getDataListOperationResult;
 
-                    foreach (UTM u in utmServers)
+                    UTM_HttpOperation getDataListOperation = new UTM_GetOperation(Log, HTTPTimeout, dataListURL);
+                    getDataListOperationResult = getDataListOperation.Exec();
+
+                    List<UTM_Data> utm_data = UTM_XMLParser.ParseResponsesFromUTM(getDataListOperationResult, Log);
+
+                    foreach (UTM_Data ud in utm_data)
                     {
-                        if (u.IsActive)
-                        {
-                            try
-                            {
-                                string dataListURL = u.IP + pathToDataFromUTM;
-                                string getDataListOperationResult;
+                        string dataURL = ud.URL;
+                        string getDataOperationResult;
 
-                                UTM_HttpOperation getDataListOperation = new UTM_GetOperation(HTTPTimeout, dataListURL);
-                                getDataListOperationResult = getDataListOperation.Exec();
+                        UTM_HttpOperation getDataOperation = new UTM_GetOperation(Log, HTTPTimeout, dataURL);
+                        getDataOperationResult = getDataOperation.Exec();
 
-                                List<UTM_Data> utm_data = UTM_XMLParser.ParseResponsesFromUTM(getDataListOperationResult);
-
-                                foreach (UTM_Data ud in utm_data)
-                                {
-                                    string dataURL = ud.URL;
-                                    string getDataOperationResult;
-
-                                    UTM_HttpOperation getDataOperation = new UTM_GetOperation(HTTPTimeout, dataURL);
-                                    getDataOperationResult = getDataOperation.Exec();
-
-                                    ud.Data = getDataOperationResult;
-                                    ud.UTM_Id = u.Id;
-                                    ud.Insert(ConnectionString, utm_DataInsertExpression, SqlCommandTimeout);
-                                }
-                            }
-                            catch { }
-                        }
+                        ud.Data = getDataOperationResult;
+                        ud.UTM_Id = utm.Id;
+                        ud.Insert(Settings, Log);
                     }
-                }      
+                }                  
             }
-            catch { }
+            catch (Exception ex)
+            {
+                Log.LogException(ex);
+            }
         }
-        public async Task GetAsync()
+        public async Task GetAsync(UTM utm)
         {
-            await Task.Run(() => Get());
+            await Task.Run(() => Get(utm));
         }
-        protected void Send()
+        protected void Send(UTM utm)
         {
             try
             {
-                string getReadyUTM_DataExpression = Settings.GetServiceSetting("proc_GetReadyUTM_Data");
-                string utm_DataUpdateReply_IdExpression = Settings.GetServiceSetting("proc_UTM_DataUpdateReply_Id");
-                string statusCode = Settings.GetServiceSetting("SentStatusCode");
+                string boundary = Settings.GetServiceSetting("HTTPRequestBoundary");
+                boundary += DateTime.Now.Ticks.ToString("x");
 
-                if (!string.IsNullOrWhiteSpace(getReadyUTM_DataExpression))
+                List<UTM_Data> readyUTM_Data = UTM_DataMapper.GetReadyUTM_Data(Settings, utm.Id, Log);
+
+                foreach (UTM_Data ud in readyUTM_Data)
                 {
-                    List<UTM> utmServers = UTMMapper.GetUTMServers(ConnectionString, GetUTMExpression, SqlCommandTimeout);
-                    
-                    string boundary = "---------------------------" + DateTime.Now.Ticks.ToString("x");
+                    UTM_HttpOperation sendReadyUTM_DataOperation = new UTM_SendOperation(Log, HTTPTimeout, ud.URL, ud.Data, ud.DataGUID, boundary);
 
-                    foreach (UTM u in utmServers)
+                    string sendReadyUTM_DataResult = sendReadyUTM_DataOperation.Exec();
+                    string reply_Id = UTM_XMLParser.ParseResponseFromUTM(sendReadyUTM_DataResult, Log);
+
+                    ud.Reply_Id = reply_Id;
+
+                    if (!string.IsNullOrWhiteSpace(reply_Id))
                     {
-                        if (u.IsActive)
-                        {
-                            try
-                            {
-                                List<UTM_Data> readyUTM_Data = UTM_DataMapper.GetReadyUTM_Data(ConnectionString, getReadyUTM_DataExpression, SqlCommandTimeout, u.Id);
-
-                                foreach (UTM_Data ud in readyUTM_Data)
-                                {
-                                    UTM_HttpOperation sendReadyUTM_DataOperation = new UTM_SendOperation(HTTPTimeout, ud.URL, ud.Data, ud.DataGUID, boundary);
-                                    string sendReadyUTM_DataResult = sendReadyUTM_DataOperation.Exec();
-                                    string reply_Id = UTM_XMLParser.ParseResponseFromUTM(sendReadyUTM_DataResult);
-
-                                    if (!string.IsNullOrWhiteSpace(reply_Id)) 
-                                    {
-                                        ud.UpdateReply_Id(ConnectionString, utm_DataUpdateReply_IdExpression, SqlCommandTimeout, reply_Id, statusCode);
-                                    }
-                                }
-                            }
-                            catch { }
-                        }
+                        ud.UpdateReply_Id(Settings, Log);
                     }
                 }
             }
-            catch { }
+            catch (Exception ex)
+            {
+                Log.LogException(ex);
+            }
         }
-        public async Task SendAsync()
+        public async Task SendAsync(UTM utm)
         {
-            await Task.Run(() => Send());
+            await Task.Run(() => Send(utm));
+        }
+        public void ScanUTMState()
+        {
+            try 
+            {
+                List<UTM> utmServers = UTMMapper.GetUTMServers(Settings, Log);
+
+                foreach (UTM u in utmServers)
+                {
+                    try
+                    {
+                        byte isActive = 0;
+                        string getUTMStateOperationResult;
+                        string URL = u.TransferProtocol +  u.IP;
+
+                        UTM_HttpOperation getUTMStateOperation = new UTM_GetOperation(Log, HTTPTimeout, URL);
+                        getUTMStateOperationResult = getUTMStateOperation.Exec();
+
+                        if (!string.IsNullOrWhiteSpace(getUTMStateOperationResult))
+                        {
+                            isActive = 1;
+                        }
+
+                        u.IsActive = isActive;
+                        u.SetUTMState(Settings, Log);
+                    }
+                    catch(Exception ex) 
+                    {
+                        Log.LogException(ex);
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                Log.LogException(ex);
+            }
         }
     }
 }

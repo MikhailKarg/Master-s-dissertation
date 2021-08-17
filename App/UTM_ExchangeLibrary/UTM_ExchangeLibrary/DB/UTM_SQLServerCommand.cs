@@ -9,41 +9,54 @@ using UTM_ExchangeLibrary.Interfaces;
 
 namespace UTM_ExchangeLibrary.DB
 {
-    internal class UTM_SQLServerCommand : IUTM_DBCommand
+    internal class UTM_SQLServerCommand : UTM_Object, IUTM_DBCommand 
     {
-        protected SqlConnection connection;
-        protected SqlCommand command;
-        public void BuildCommand(string connectionString, string procedureName, int commandTimeout)
+        protected SqlConnection Connection;
+        protected SqlCommand Command;
+        protected IUTM_Log Log;
+        public void BuildCommand(IUTM_ServiceSettings serviceSettings, string sqlExpression, IUTM_Log log)
         {
+            ConnectionString = serviceSettings.GetServiceSetting("ConnectionString");
+            SqlCommandTimeout = Convert.ToInt32(serviceSettings.GetServiceSetting("SqlCommandTimeout"));
+            SqlExpression = sqlExpression;
+
             try
             {
-                connection = new SqlConnection(connectionString);
-                command = new SqlCommand(procedureName, connection);
-                command.CommandType = CommandType.StoredProcedure;
-                command.CommandTimeout = commandTimeout;
+                Log = log;
+
+                Connection = new SqlConnection(ConnectionString);
+                Command = new SqlCommand(SqlExpression, Connection);
+                Command.CommandType = CommandType.StoredProcedure;
+                Command.CommandTimeout = SqlCommandTimeout;
             }
-            catch { }
+            catch(Exception ex) 
+            {
+                Log.LogException(ex);
+            }
         }
         public void AddCommandParameter(string parameterName, string value)
         {
             try
             {
-                command.Parameters.Add(new SqlParameter { ParameterName = parameterName, Value = value });
+                Command.Parameters.Add(new SqlParameter { ParameterName = parameterName, Value = value });
             }
-            catch { }
+            catch (Exception ex)
+            {
+                Log.LogException(ex);
+            }
         }
         public List<UTM_ExecutedCommandData> Exec()
         {
             List<UTM_ExecutedCommandData> dataList = new List<UTM_ExecutedCommandData>();
-            IDictionary<string, string> row;
+            IDictionary<string, string> datarow;
 
             try 
             {
-                using (connection)
+                using (Connection)
                 {
-                    connection.Open();
+                    Connection.Open();
 
-                    SqlDataReader reader = command.ExecuteReader();
+                    SqlDataReader reader = Command.ExecuteReader();
 
                     if (reader.HasRows)
                     {
@@ -51,19 +64,22 @@ namespace UTM_ExchangeLibrary.DB
 
                         while (reader.Read())
                         {
-                            row = new Dictionary<string, string>();
+                            datarow = new Dictionary<string, string>();
 
                             for (var i = 0; i < fieldCount; i++)
                             {
-                                row.Add(reader.GetName(i), (string)reader.GetValue(i));
+                                datarow.Add(reader.GetName(i), (string)reader.GetValue(i));
                             }
 
-                            dataList.Add(new UTM_ExecutedCommandData(row));
+                            dataList.Add(new UTM_ExecutedCommandData(datarow));
                         }
                     }
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception ex)
+            {
+                Log.LogException(ex);
+            }
 
             return dataList;
         }

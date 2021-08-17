@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using UTM_ExchangeLibrary.Interfaces;
 
 namespace UTM_ExchangeLibrary.XMLParsers
 {
     internal class UTM_XMLParser
     {
-        internal static string ParseResponseFromUTM(string response)
+        internal static string ParseResponseFromUTM(string response, IUTM_Log log)
         {
             string result = null;
 
@@ -20,12 +21,15 @@ namespace UTM_ExchangeLibrary.XMLParsers
                     XDocument xdoc = XDocument.Parse(response);
                     result = xdoc.Root.Element("url")?.Value;
                 }
-                catch {}
+                catch (Exception ex)
+                {
+                    log.LogException(ex);
+                }
             }
 
             return result;
         }
-        internal static List<UTM_Data> ParseResponsesFromUTM(string response)
+        internal static List<UTM_Data> ParseResponsesFromUTM(string response, IUTM_Log log)
         {
             List<UTM_Data> UTM_DataList = new List<UTM_Data>();
 
@@ -51,7 +55,10 @@ namespace UTM_ExchangeLibrary.XMLParsers
                         UTM_DataList.Add((UTM_Data)UTM_Data.GetBuilder().SetURL(url).SetReply_Id(replyId).Build());
                     }
                 }
-                catch { }
+                catch (Exception ex)
+                {
+                    log.LogException(ex);
+                }
             }
 
             return UTM_DataList;

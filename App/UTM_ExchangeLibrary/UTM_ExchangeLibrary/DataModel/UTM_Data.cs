@@ -16,11 +16,15 @@ namespace UTM_ExchangeLibrary
         public string DataGUID { get; set; }
         public string ExchangeTypeCode { get; set; }
         public int UTM_Id { get; set; }
-        public void Insert(string connectionString, string sqlExpression, int commandTimeout) 
+        public void Insert(IUTM_ServiceSettings serviceSettings, IUTM_Log log) 
         {
+            ConnectionString = serviceSettings.GetServiceSetting("ConnectionString");
+            SqlExpression = serviceSettings.GetServiceSetting("proc_UTM_DataInsert");
+            SqlCommandTimeout = Convert.ToInt32(serviceSettings.GetServiceSetting("SqlCommandTimeout"));
+
             IUTM_DBCommand UTM_DataInsert = new UTM_SQLServerCommand();
 
-            UTM_DataInsert.BuildCommand(connectionString, sqlExpression, commandTimeout);
+            UTM_DataInsert.BuildCommand(serviceSettings, SqlExpression, log);
             UTM_DataInsert.AddCommandParameter("ExchangeTypeCode", ExchangeTypeCode);
             UTM_DataInsert.AddCommandParameter("UTM_Id", Convert.ToString(UTM_Id));
             UTM_DataInsert.AddCommandParameter("Data", Data);
@@ -30,13 +34,19 @@ namespace UTM_ExchangeLibrary
 
             UTM_DataInsert.Exec();
         }
-        public void UpdateReply_Id(string connectionString, string sqlExpression, int commandTimeout, string reply_Id, string statusCode) 
+        public void UpdateReply_Id(IUTM_ServiceSettings serviceSettings, IUTM_Log log) 
         {
+            ConnectionString = serviceSettings.GetServiceSetting("ConnectionString");
+            SqlExpression = serviceSettings.GetServiceSetting("proc_UTM_DataUpdateReply_Id");
+            SqlCommandTimeout = Convert.ToInt32(serviceSettings.GetServiceSetting("SqlCommandTimeout"));
+
+            string statusCode = serviceSettings.GetServiceSetting("SentStatusCode");
+
             IUTM_DBCommand UTM_DataUpdateReply_Id = new UTM_SQLServerCommand();
 
-            UTM_DataUpdateReply_Id.BuildCommand(connectionString, sqlExpression, commandTimeout);
+            UTM_DataUpdateReply_Id.BuildCommand(serviceSettings, SqlExpression, log);
             UTM_DataUpdateReply_Id.AddCommandParameter("UTM_Data_Id", Convert.ToString(Id));
-            UTM_DataUpdateReply_Id.AddCommandParameter("Reply_Id", reply_Id);
+            UTM_DataUpdateReply_Id.AddCommandParameter("Reply_Id", Reply_Id);
             UTM_DataUpdateReply_Id.AddCommandParameter("StatusCode", statusCode);
 
             UTM_DataUpdateReply_Id.Exec();

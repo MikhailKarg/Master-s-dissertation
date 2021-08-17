@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UTM_ExchangeLibrary.DB;
 using UTM_ExchangeLibrary.Interfaces;
 
@@ -10,10 +7,13 @@ namespace UTM_ExchangeLibrary.DBMappers
 {
     public class UTMMapper
     {
-        public static List<UTM> GetUTMServers(string connectionString, string sqlExpression, int commandTimeout)
+        public static List<UTM> GetUTMServers(IUTM_ServiceSettings serviceSettings, IUTM_Log log)
         {
+            string sqlExpression = serviceSettings.GetServiceSetting("proc_GetUTM");
+
             IUTM_DBCommand GetUTM_DataCommand = new UTM_SQLServerCommand();
-            GetUTM_DataCommand.BuildCommand(connectionString, sqlExpression, commandTimeout);
+
+            GetUTM_DataCommand.BuildCommand(serviceSettings, sqlExpression, log);
 
             List<UTM_ExecutedCommandData> data = GetUTM_DataCommand.Exec();
             List<UTM> utmList = new List<UTM>();
@@ -33,9 +33,14 @@ namespace UTM_ExchangeLibrary.DBMappers
                     builder.SetIP(dictData["IP"]);
                 }
 
+                if (dictData.ContainsKey("TransferProtocol"))
+                {
+                    builder.SetTransferProtocol(dictData["TransferProtocol"]);
+                }
+
                 if (dictData.ContainsKey("IsActive"))
                 {
-                    builder.SetActive(Convert.ToBoolean(dictData["IsActive"]));
+                    builder.SetActive(Convert.ToByte(dictData["IsActive"]));
                 }
 
                 utmList.Add((UTM)builder.Build());

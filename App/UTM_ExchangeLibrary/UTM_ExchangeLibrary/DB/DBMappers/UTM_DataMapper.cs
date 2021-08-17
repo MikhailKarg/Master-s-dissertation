@@ -10,11 +10,13 @@ namespace UTM_ExchangeLibrary.DBMappers
 {
     public class UTM_DataMapper
     {
-        public static List<UTM_Data> GetReadyUTM_Data(string connectionString, string sqlExpression, int commandTimeout, int utm_id)
+        public static List<UTM_Data> GetReadyUTM_Data(IUTM_ServiceSettings serviceSettings, int utm_id, IUTM_Log log)
         {
+            string sqlExpression = serviceSettings.GetServiceSetting("proc_GetReadyUTM_Data");
+
             IUTM_DBCommand GetReadyUTM_DataCommand = new UTM_SQLServerCommand();
 
-            GetReadyUTM_DataCommand.BuildCommand(connectionString, sqlExpression, commandTimeout);
+            GetReadyUTM_DataCommand.BuildCommand(serviceSettings, sqlExpression, log);
             GetReadyUTM_DataCommand.AddCommandParameter("UTM_Id", Convert.ToString(utm_id));
 
             List<UTM_ExecutedCommandData> data = GetReadyUTM_DataCommand.Exec();

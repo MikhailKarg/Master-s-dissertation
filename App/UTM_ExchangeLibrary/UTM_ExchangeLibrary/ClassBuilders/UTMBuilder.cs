@@ -24,7 +24,12 @@ namespace UTM_ExchangeLibrary
             utm.IP = ip;
             return this;
         }
-        public IUTM_ObjectBuilder SetActive(bool isActive)
+        public IUTM_ObjectBuilder SetTransferProtocol(string transferProtocol)
+        {
+            utm.TransferProtocol = transferProtocol;
+            return this;
+        }
+        public IUTM_ObjectBuilder SetActive(byte isActive)
         {
             utm.IsActive = isActive;
             return this;

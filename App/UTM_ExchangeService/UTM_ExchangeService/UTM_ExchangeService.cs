@@ -1,30 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Linq;
-using System.ServiceProcess;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ServiceProcess;
+using System.Threading;
 
 namespace UTM_ExchangeService
 {
-    partial class UTM_ExchangeService : ServiceBase
+    public partial class UTM_ExchangeService : ServiceBase
     {
+        UTM_ExchangeServiceBroker ExchangeServiceBroker;
         public UTM_ExchangeService()
         {
             InitializeComponent();
+            CanStop = true;
+            CanPauseAndContinue = true;
+            CanShutdown = true;
+            AutoLog = true;
         }
 
         protected override void OnStart(string[] args)
         {
-            // TODO: Add code here to start your service.
+            ExchangeServiceBroker = new UTM_ExchangeServiceBroker();
+            Thread exchangeServiceBrokerThread = new Thread(new ThreadStart(ExchangeServiceBroker.Start));
+            exchangeServiceBrokerThread.Start();
         }
-
         protected override void OnStop()
         {
-            // TODO: Add code here to perform any tear-down necessary to stop your service.
+            ExchangeServiceBroker.Stop();
+        }
+        protected override void OnPause()
+        {
+            ExchangeServiceBroker.Pause();
+        }
+        protected override void OnContinue()
+        {
+            ExchangeServiceBroker.Continue();
+        }
+        protected override void OnShutdown()
+        {
+            ExchangeServiceBroker.Shutdown();
         }
     }
 }
