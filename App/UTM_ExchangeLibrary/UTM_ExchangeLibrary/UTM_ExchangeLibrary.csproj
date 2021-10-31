@@ -70,7 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DB\DBMappers\UTMMapper.cs" />
-    <Compile Include="DB\DBMappers\UTM_DataMapper.cs" />
+    <Compile Include="DB\DBMappers\UTM_ExchangeDataMapper.cs" />
     <Compile Include="DB\UTM_ExecutedCommandData.cs" />
     <Compile Include="DB\UTM_SQLServerCommand.cs" />
     <Compile Include="Interfaces\IUTM_DBCommand.cs" />
@@ -82,8 +82,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataModel\UTM.cs" />
     <Compile Include="ClassBuilders\UTMBuilder.cs" />
-    <Compile Include="DataModel\UTM_Data.cs" />
-    <Compile Include="ClassBuilders\UTM_DataBuilder.cs" />
+    <Compile Include="DataModel\UTM_ExchangeData.cs" />
+    <Compile Include="ClassBuilders\UTM_ExchangeDataBuilder.cs" />
     <Compile Include="UTM_Exchange.cs" />
     <Compile Include="DataModel\UTM_JSONServiceSettings.cs" />
     <Compile Include="Interfaces\AbstractClasses\UTM_Object.cs" />

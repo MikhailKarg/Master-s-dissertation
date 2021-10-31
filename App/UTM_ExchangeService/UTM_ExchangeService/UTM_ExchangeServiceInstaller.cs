@@ -7,21 +7,21 @@ namespace UTM_ExchangeService
     [RunInstaller(true)]
     public partial class UTM_ExchangeServiceInstaller : Installer
     {
-        ServiceInstaller serviceInstaller;
-        ServiceProcessInstaller processInstaller;
+        ServiceInstaller ServiceInstaller;
+        ServiceProcessInstaller ProcessInstaller;
 
         public UTM_ExchangeServiceInstaller()
         {
             InitializeComponent();
-            serviceInstaller = new ServiceInstaller();
-            processInstaller = new ServiceProcessInstaller();
+            ServiceInstaller = new ServiceInstaller();
+            ProcessInstaller = new ServiceProcessInstaller();
 
-            processInstaller.Account = ServiceAccount.LocalSystem;
-            serviceInstaller.StartType = ServiceStartMode.Manual;
-            serviceInstaller.ServiceName = "UTM_ExchangeService";
-            serviceInstaller.Description = "Service for transferring information on the turnover and retail sale of alcoholic products from wholesale and retail organizations to the EGAIS db";
-            Installers.Add(processInstaller);
-            Installers.Add(serviceInstaller);
+            ProcessInstaller.Account = ServiceAccount.LocalSystem;
+            ServiceInstaller.StartType = ServiceStartMode.Manual;
+            ServiceInstaller.ServiceName = "UTM_ExchangeService";
+            ServiceInstaller.Description = "Service for transferring information on the turnover and retail sale of alcoholic products from wholesale and retail organizations to the EGAIS db";
+            Installers.Add(ProcessInstaller);
+            Installers.Add(ServiceInstaller);
         }
     }
 }

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using UTM_ExchangeLibrary.DBMappers;
 using UTM_ExchangeLibrary.Interfaces;
@@ -36,9 +34,9 @@ namespace UTM_ExchangeLibrary
                     UTM_HttpOperation getDataListOperation = new UTM_GetOperation(Log, HTTPTimeout, dataListURL);
                     getDataListOperationResult = getDataListOperation.Exec();
 
-                    List<UTM_Data> utm_data = UTM_XMLParser.ParseResponsesFromUTM(getDataListOperationResult, Log);
+                    List<UTM_ExchangeData> utm_data = UTM_XMLParser.ParseResponsesFromUTM(getDataListOperationResult, Log);
 
-                    foreach (UTM_Data ud in utm_data)
+                    foreach (UTM_ExchangeData ud in utm_data)
                     {
                         string dataURL = ud.URL;
                         string getDataOperationResult;
@@ -68,9 +66,9 @@ namespace UTM_ExchangeLibrary
                 string boundary = Settings.GetServiceSetting("HTTPRequestBoundary");
                 boundary += DateTime.Now.Ticks.ToString("x");
 
-                List<UTM_Data> readyUTM_Data = UTM_DataMapper.GetReadyUTM_Data(Settings, utm.Id, Log);
+                List<UTM_ExchangeData> readyUTM_Data = UTM_ExchangeDataMapper.GetReadyUTM_Data(Settings, utm.Id, Log);
 
-                foreach (UTM_Data ud in readyUTM_Data)
+                foreach (UTM_ExchangeData ud in readyUTM_Data)
                 {
                     UTM_HttpOperation sendReadyUTM_DataOperation = new UTM_SendOperation(Log, HTTPTimeout, ud.URL, ud.Data, ud.DataGUID, boundary);
 

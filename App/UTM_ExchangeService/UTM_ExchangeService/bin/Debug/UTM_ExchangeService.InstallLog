@@ -1,0 +1,79 @@
+﻿Выполняется установка сборки 'D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe
+   logfile = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.InstallLog
+Устанавливается служба UTM_ExchangeService...
+Создается исходный EventLog UTM_ExchangeService в журнале Application...
+Выполняется откат для сборки 'D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe
+   logfile = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.InstallLog
+Восстанавливается исходное состояние журнала событий для источника UTM_ExchangeService.
+При выполнении программы установки System.Diagnostics.EventLogInstaller на этапе отката возникло исключение.
+System.Security.SecurityException: Источник не найден, но не удалось выполнить поиск по нескольким или всем журналам событий.  Недоступные журналы: Security.
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+Выполняется установка сборки 'D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.InstallLog
+   assemblypath = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe
+Устанавливается служба UTM_ExchangeService...
+Служба UTM_ExchangeService успешно установлена.
+Создается исходный EventLog UTM_ExchangeService в журнале Application...
+Выполняется фиксация сборки 'D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.InstallLog
+   assemblypath = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe
+Выполняется удаление сборки 'D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.InstallLog
+   assemblypath = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe
+Выполняется удаление источника EventLog UTM_ExchangeService.
+Выполняется удаление службы UTM_ExchangeService из системы...
+Служба UTM_ExchangeService успешно удалена из системы.
+Выполняется установка сборки 'D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.InstallLog
+   assemblypath = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe
+Устанавливается служба UTM_ExchangeService...
+Служба UTM_ExchangeService успешно установлена.
+Создается исходный EventLog UTM_ExchangeService в журнале Application...
+Выполняется фиксация сборки 'D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.InstallLog
+   assemblypath = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe
+Выполняется удаление сборки 'D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.InstallLog
+   assemblypath = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe
+Выполняется удаление источника EventLog UTM_ExchangeService.
+Выполняется удаление службы UTM_ExchangeService из системы...
+Служба UTM_ExchangeService успешно удалена из системы.
+Выполняется установка сборки 'D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.InstallLog
+   assemblypath = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe
+Устанавливается служба UTM_ExchangeService...
+Служба UTM_ExchangeService успешно установлена.
+Создается исходный EventLog UTM_ExchangeService в журнале Application...
+Выполняется фиксация сборки 'D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.InstallLog
+   assemblypath = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe
+Выполняется удаление сборки 'D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.InstallLog
+   assemblypath = D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe
+Выполняется удаление источника EventLog UTM_ExchangeService.
+Выполняется удаление службы UTM_ExchangeService из системы...
+Служба UTM_ExchangeService успешно удалена из системы.

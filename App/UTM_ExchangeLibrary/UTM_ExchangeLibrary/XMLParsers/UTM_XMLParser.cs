@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 using UTM_ExchangeLibrary.Interfaces;
 
@@ -29,9 +26,9 @@ namespace UTM_ExchangeLibrary.XMLParsers
 
             return result;
         }
-        internal static List<UTM_Data> ParseResponsesFromUTM(string response, IUTM_Log log)
+        internal static List<UTM_ExchangeData> ParseResponsesFromUTM(string response, IUTM_Log log)
         {
-            List<UTM_Data> UTM_DataList = new List<UTM_Data>();
+            List<UTM_ExchangeData> UTM_DataList = new List<UTM_ExchangeData>();
 
             if (!string.IsNullOrWhiteSpace(response))
             {
@@ -52,7 +49,7 @@ namespace UTM_ExchangeLibrary.XMLParsers
                             url = i.Value;
                         }
 
-                        UTM_DataList.Add((UTM_Data)UTM_Data.GetBuilder().SetURL(url).SetReply_Id(replyId).Build());
+                        UTM_DataList.Add((UTM_ExchangeData)UTM_ExchangeData.GetBuilder().SetURL(url).SetReply_Id(replyId).Build());
                     }
                 }
                 catch (Exception ex)

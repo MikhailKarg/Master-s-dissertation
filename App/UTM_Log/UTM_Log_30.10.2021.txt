@@ -1,0 +1,1726 @@
+﻿******************** 30.10.2021 15:31:20 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 15:31:20 ********************
+Debug:
+Exception Type: System.ArgumentOutOfRangeException
+Exception: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+Source: mscorlib
+Stack Trace: 
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в UTM_ExchangeLibrary.UTM_ServiceSettings.GetSettings() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\UTM_ServiceSettings.cs:строка 70
+
+******************** 30.10.2021 15:31:20 ********************
+Debug:
+Запуск службы - ServiceTimeout: 10000 мс
+
+******************** 30.10.2021 15:31:20 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 15:31:20 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 15:31:20 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 15:31:27 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Stop() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 87
+
+******************** 30.10.2021 15:31:27 ********************
+Debug:
+Работа службы остановлена
+
+******************** 30.10.2021 15:32:39 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 15:32:39 ********************
+Debug:
+Exception Type: System.ArgumentOutOfRangeException
+Exception: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+Source: mscorlib
+Stack Trace: 
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в UTM_ExchangeLibrary.UTM_ServiceSettings.GetSettings() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\UTM_ServiceSettings.cs:строка 70
+
+******************** 30.10.2021 15:32:39 ********************
+Debug:
+Запуск службы - ServiceTimeout: 10000 мс
+
+******************** 30.10.2021 15:32:39 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 15:32:39 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 15:32:39 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 15:32:59 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 15:32:59 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 15:32:59 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 15:33:09 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 15:33:20 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 15:33:20 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 15:33:30 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 15:33:30 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 15:33:30 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 15:33:40 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 15:33:50 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 15:34:05 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 15:34:15 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 15:34:15 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 15:34:21 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 15:34:27 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Stop() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 87
+
+******************** 30.10.2021 15:34:27 ********************
+Debug:
+Работа службы остановлена
+
+******************** 30.10.2021 16:06:06 ********************
+Debug:
+Exception Type: System.ArgumentException
+Exception: Пустое имя пути не допускается.
+Source: mscorlib
+Stack Trace: 
+   в System.IO.File.ReadAllText(String path)
+   в UTM_ExchangeLibrary.UTM_ServiceSettings.GetJSONSettings(String serviceSettingsPath) в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\UTM_ServiceSettings.cs:строка 44
+
+******************** 30.10.2021 16:16:20 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:16:20 ********************
+Debug:
+Exception Type: System.ArgumentOutOfRangeException
+Exception: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+Source: mscorlib
+Stack Trace: 
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в UTM_ExchangeLibrary.UTM_ServiceSettings.GetSettings() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\UTM_ServiceSettings.cs:строка 70
+
+******************** 30.10.2021 16:16:20 ********************
+Debug:
+Запуск службы - ServiceTimeout: 10000 мс
+
+******************** 30.10.2021 16:16:20 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:16:20 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:16:20 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:16:40 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:16:40 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:16:40 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:16:50 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:17:00 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:17:33 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:17:38 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Stop() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 87
+
+******************** 30.10.2021 16:17:38 ********************
+Debug:
+Работа службы остановлена
+
+******************** 30.10.2021 16:21:59 ********************
+Debug:
+Exception Type: System.ArgumentException
+Exception: Пустое имя пути не допускается.
+Source: mscorlib
+Stack Trace: 
+   в System.IO.File.ReadAllText(String path)
+   в UTM_ExchangeLibrary.UTM_ServiceSettings.GetJSONSettings(String serviceSettingsPath) в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\UTM_ServiceSettings.cs:строка 44
+
+******************** 30.10.2021 16:37:28 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:37:28 ********************
+Debug:
+Exception Type: System.ArgumentOutOfRangeException
+Exception: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+Имя параметра: index
+Source: mscorlib
+Stack Trace: 
+   в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в UTM_ExchangeLibrary.UTM_ServiceSettings.GetSettings() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\UTM_ServiceSettings.cs:строка 70
+
+******************** 30.10.2021 16:37:28 ********************
+Debug:
+Запуск службы - ServiceTimeout: 10000 мс
+
+******************** 30.10.2021 16:37:28 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:37:28 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:37:28 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:37:48 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:37:48 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:37:48 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:37:58 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:38:08 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:39:09 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:39:29 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:39:29 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:40:07 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:40:27 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:40:27 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:40:27 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:40:37 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:40:37 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:40:37 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:40:47 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:40:47 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:40:47 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:40:57 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:40:57 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:40:57 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:41:07 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:41:07 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:41:07 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:41:17 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:41:17 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:41:17 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:41:37 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:41:37 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:41:37 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:41:47 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:41:47 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:41:47 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:41:57 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:41:57 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:41:57 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:42:07 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:42:07 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:42:07 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:42:17 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:42:17 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:42:17 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:42:27 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:42:27 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:42:27 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:42:47 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:42:47 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:42:47 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:42:57 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:42:57 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:42:57 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:43:01 ********************
+Debug:
+Exception Type: System.ArgumentException
+Exception: Пустое имя пути не допускается.
+Source: mscorlib
+Stack Trace: 
+   в System.IO.File.ReadAllText(String path)
+   в UTM_ExchangeLibrary.UTM_ServiceSettings.GetJSONSettings(String serviceSettingsPath) в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\UTM_ServiceSettings.cs:строка 44
+
+******************** 30.10.2021 16:43:07 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:43:07 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:43:07 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:43:17 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:43:17 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:43:17 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:43:27 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:43:27 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:43:27 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:43:37 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:43:37 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:43:37 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:43:57 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:44:07 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:44:07 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:44:27 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:44:37 ********************
+Debug:
+Exception Type: System.Data.SqlClient.SqlException
+Exception: Не удается открыть базу данных "UTM", запрашиваемую именем входа. Не удалось выполнить вход.
+При входе в систему пользователя "NT AUTHORITY\СИСТЕМА" произошла ошибка.
+Source: .Net SqlClient Data Provider
+Stack Trace: 
+   в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в UTM_ExchangeLibrary.DB.UTM_SQLServerCommand.Exec() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeLibrary\UTM_ExchangeLibrary\DB\UTM_SQLServerCommand.cs:строка 54
+
+******************** 30.10.2021 16:44:37 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Start() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 67
+
+******************** 30.10.2021 16:44:39 ********************
+Debug:
+Exception Type: System.NullReferenceException
+Exception: Ссылка на объект не указывает на экземпляр объекта.
+Source: UTM_ExchangeService
+Stack Trace: 
+   в UTM_ExchangeService.UTM_ExchangeServiceBroker.Stop() в D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\UTM_ExchangeServiceBroker.cs:строка 87
+
+******************** 30.10.2021 16:44:39 ********************
+Debug:
+Работа службы остановлена
+
