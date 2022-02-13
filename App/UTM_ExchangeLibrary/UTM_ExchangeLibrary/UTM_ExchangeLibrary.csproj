@@ -73,10 +73,12 @@
     <Compile Include="DB\DBMappers\UTM_ExchangeDataMapper.cs" />
     <Compile Include="DB\UTM_ExecutedCommandData.cs" />
     <Compile Include="DB\UTM_SQLServerCommand.cs" />
+    <Compile Include="Interfaces\AbstractClasses\UTM_DBObject.cs" />
     <Compile Include="Interfaces\IUTM_DBCommand.cs" />
     <Compile Include="Interfaces\IUTM_Log.cs" />
     <Compile Include="Interfaces\IUTM_ObjectBuilder.cs" />
     <Compile Include="Interfaces\IUTM_ServiceSettings.cs" />
+    <Compile Include="Log\UTM_ConsoleLog.cs" />
     <Compile Include="Log\UTM_Log.cs" />
     <Compile Include="Log\UTM_LogLevel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

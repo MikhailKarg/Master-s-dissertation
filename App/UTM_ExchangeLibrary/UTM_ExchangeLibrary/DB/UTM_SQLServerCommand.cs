@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using UTM_ExchangeLibrary.Interfaces;
+using UTM_ExchangeLibrary.Interfaces.AbstractClasses;
 
 namespace UTM_ExchangeLibrary.DB
 {
-    internal class UTM_SQLServerCommand : UTM_Object, IUTM_DBCommand 
+    public class UTM_SQLServerCommand : UTM_DBObject, IUTM_DBCommand 
     {
         protected SqlConnection Connection;
         protected SqlCommand Command;
@@ -15,7 +16,7 @@ namespace UTM_ExchangeLibrary.DB
         {
             ConnectionString = serviceSettings.GetServiceSetting("ConnectionString");
             SqlCommandTimeout = Convert.ToInt32(serviceSettings.GetServiceSetting("SqlCommandTimeout"));
-            SqlExpression = sqlExpression;
+            SqlExpression = serviceSettings.GetServiceSetting(sqlExpression);
 
             try
             {

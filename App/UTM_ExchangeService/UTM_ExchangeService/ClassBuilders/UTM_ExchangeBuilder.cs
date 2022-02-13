@@ -7,16 +7,16 @@ namespace UTM_ExchangeService.ClassBuilders
     {
         UTM_Exchange Exchange { get; }
         static UTM_ExchangeBuilder ExchangeBuilder;
-        protected UTM_ExchangeBuilder(IUTM_ServiceSettings settings, IUTM_Log serviceLog)
+        protected UTM_ExchangeBuilder(IUTM_ServiceSettings settings, IUTM_Log serviceLog, IUTM_DBCommand dbCommand)
         {
-            Exchange = new UTM_Exchange(settings, serviceLog);
+            Exchange = new UTM_Exchange(settings, serviceLog, dbCommand);
         }
 
-        public static UTM_Exchange GetExchange(IUTM_ServiceSettings settings, IUTM_Log serviceLog)
+        public static UTM_Exchange GetExchange(IUTM_ServiceSettings settings, IUTM_Log serviceLog, IUTM_DBCommand dbCommand)
         {
             if (ExchangeBuilder == null)
             {
-                ExchangeBuilder = new UTM_ExchangeBuilder(settings, serviceLog);
+                ExchangeBuilder = new UTM_ExchangeBuilder(settings, serviceLog, dbCommand);
             }
 
             return ExchangeBuilder.Exchange;

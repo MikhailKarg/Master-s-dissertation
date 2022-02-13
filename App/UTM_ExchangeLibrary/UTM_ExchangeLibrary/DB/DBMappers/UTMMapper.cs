@@ -7,11 +7,11 @@ namespace UTM_ExchangeLibrary.DBMappers
 {
     public class UTMMapper
     {
-        public static List<UTM> GetUTMServers(IUTM_ServiceSettings serviceSettings, IUTM_Log log)
+        public static List<UTM> GetUTMServers(IUTM_ServiceSettings serviceSettings, IUTM_Log log, IUTM_DBCommand dbCommand)
         {
-            string sqlExpression = serviceSettings.GetServiceSetting("proc_GetUTM");
+            string sqlExpression = "proc_GetUTM";
 
-            IUTM_DBCommand GetUTM_DataCommand = new UTM_SQLServerCommand();
+            IUTM_DBCommand GetUTM_DataCommand = dbCommand;
 
             GetUTM_DataCommand.BuildCommand(serviceSettings, sqlExpression, log);
 

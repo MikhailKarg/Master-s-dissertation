@@ -1,3 +1,5 @@
+D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\obj\Debug\UTM_ExchangeService.exe.config
+D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\obj\Debug\UTM_ExchangeService.csproj.CoreCompileInputs.cache
 D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe.config
 D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.exe
 D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\UTM_ExchangeService.pdb
@@ -30,9 +32,6 @@ D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeSer
 D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
 D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\System.Buffers.xml
 D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\obj\Debug\UTM_ExchangeService.exe.config
-D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\obj\Debug\UTM_ExchangeService.csproj.CoreCompileInputs.cache
 D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\obj\Debug\UTM_ExchangeService.csproj.CopyComplete
 D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\obj\Debug\UTM_ExchangeService.exe
 D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\obj\Debug\UTM_ExchangeService.pdb
-D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeService\UTM_ExchangeService\obj\Debug\UTM_ExchangeService.csprojAssemblyReference.cache

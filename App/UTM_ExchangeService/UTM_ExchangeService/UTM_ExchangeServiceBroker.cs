@@ -13,19 +13,21 @@ namespace UTM_ExchangeService
     {
         protected IUTM_Log ServiceLog;
         protected IUTM_ServiceSettings Settings;
+        protected IUTM_DBCommand DBCommand;
         protected UTM_Exchange Exchange;
         
         protected bool Enabled { get; set; }
         protected int ServiceTimeout { get; set; }
 
-        protected List<Task> GetDataList = null;
-        protected List<Task> SendDataList = null;
+        protected List<Task> GetDataList = new List<Task>();
+        protected List<Task> SendDataList = new List<Task>();
 
         public UTM_ExchangeServiceBroker()
         {
             ServiceLog = UTM_ServiceLogBuilder.GetServiceLog();
             Settings = UTM_ServiceSettingsBuilder.GetServiceSettings(ServiceLog);
-            Exchange = new UTM_Exchange(Settings, ServiceLog);
+            DBCommand = UTM_DBCommandBuilder.GetDBCommand();
+            Exchange = UTM_ExchangeBuilder.GetExchange(Settings, ServiceLog, DBCommand);
 
             ServiceTimeout = Convert.ToInt32(Settings.GetServiceSetting("ServiceTimeout"));
 
@@ -36,6 +38,29 @@ namespace UTM_ExchangeService
 
             Enabled = true;
         }
+
+        private void ExchangeWait()
+        {
+            try
+            {
+                if (GetDataList.Count != 0)
+                {
+                    Task.WaitAll(GetDataList.ToArray());
+                }
+
+                if (SendDataList.Count != 0)
+                {
+                    Task.WaitAll(SendDataList.ToArray());
+                }
+            }
+            catch (Exception ex)
+            {
+                ServiceLog.LogException(ex);
+            }
+
+            GetDataList.Clear();
+            SendDataList.Clear();
+        }
         public void Start()
         {
             ServiceLog.Log(("Запуск службы - ServiceTimeout: " + ServiceTimeout + " мс"));
@@ -44,7 +69,7 @@ namespace UTM_ExchangeService
             {
                 Exchange.ScanUTMState();
 
-                List<UTM> utmServers = UTMMapper.GetUTMServers(Settings, ServiceLog);
+                List<UTM> utmServers = UTMMapper.GetUTMServers(Settings, ServiceLog, DBCommand);
 
                 foreach (UTM u in utmServers)
                 {
@@ -62,18 +87,7 @@ namespace UTM_ExchangeService
                     }
                 }
 
-                try
-                {
-                    Task.WaitAll(GetDataList.ToArray());
-                    Task.WaitAll(SendDataList.ToArray());
-                }
-                catch (Exception ex)
-                {
-                    ServiceLog.LogException(ex);
-                }
-
-                GetDataList = null;
-                SendDataList = null;
+                ExchangeWait();
 
                 Thread.Sleep(ServiceTimeout);
             }
@@ -82,18 +96,7 @@ namespace UTM_ExchangeService
         {
             Enabled = false;
 
-            try
-            {
-                Task.WaitAll(GetDataList.ToArray());
-                Task.WaitAll(SendDataList.ToArray());
-
-                GetDataList = null;
-                SendDataList = null;
-            }
-            catch (Exception ex)
-            {
-                ServiceLog.LogException(ex);
-            }
+            ExchangeWait();
 
             ServiceLog.Log("Работа службы остановлена");
         }
@@ -101,18 +104,7 @@ namespace UTM_ExchangeService
         {
             Enabled = false;
 
-            try
-            {
-                Task.WaitAll(GetDataList.ToArray());
-                Task.WaitAll(SendDataList.ToArray());
-
-                GetDataList = null;
-                SendDataList = null;
-            }
-            catch (Exception ex)
-            {
-                ServiceLog.LogException(ex);
-            }
+            ExchangeWait();
 
             ServiceLog.Log("Работа службы приостановлена");
         }
@@ -126,18 +118,7 @@ namespace UTM_ExchangeService
         {
             Enabled = false;
 
-            try
-            {
-                Task.WaitAll(GetDataList.ToArray());
-                Task.WaitAll(SendDataList.ToArray());
-
-                GetDataList = null;
-                SendDataList = null;
-            }
-            catch (Exception ex)
-            {
-                ServiceLog.LogException(ex);
-            }
+            ExchangeWait();
 
             ServiceLog.Log("Произошло выключение или перезагрузка Windows!");
         }

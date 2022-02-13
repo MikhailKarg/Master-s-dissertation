@@ -11,12 +11,14 @@ namespace UTM_ExchangeLibrary
     {
         protected IUTM_ServiceSettings Settings;
         protected IUTM_Log Log;
+        protected IUTM_DBCommand DBCommand;
         protected int HTTPTimeout;
          
-        public UTM_Exchange(IUTM_ServiceSettings settings, IUTM_Log log)
+        public UTM_Exchange(IUTM_ServiceSettings settings, IUTM_Log log, IUTM_DBCommand dbCommand)
         {
             Settings = settings;
             Log = log;
+            DBCommand = dbCommand;
 
             HTTPTimeout = Convert.ToInt32(Settings.GetServiceSetting("HTTPTimeout"));        
         }
@@ -46,7 +48,7 @@ namespace UTM_ExchangeLibrary
 
                         ud.Data = getDataOperationResult;
                         ud.UTM_Id = utm.Id;
-                        ud.Insert(Settings, Log);
+                        ud.Insert(Settings, Log, DBCommand);
                     }
                 }                  
             }
@@ -66,7 +68,7 @@ namespace UTM_ExchangeLibrary
                 string boundary = Settings.GetServiceSetting("HTTPRequestBoundary");
                 boundary += DateTime.Now.Ticks.ToString("x");
 
-                List<UTM_ExchangeData> readyUTM_Data = UTM_ExchangeDataMapper.GetReadyUTM_Data(Settings, utm.Id, Log);
+                List<UTM_ExchangeData> readyUTM_Data = UTM_ExchangeDataMapper.GetReadyUTM_Data(Settings, utm.Id, Log, DBCommand);
 
                 foreach (UTM_ExchangeData ud in readyUTM_Data)
                 {
@@ -79,7 +81,7 @@ namespace UTM_ExchangeLibrary
 
                     if (!string.IsNullOrWhiteSpace(reply_Id))
                     {
-                        ud.UpdateReply_Id(Settings, Log);
+                        ud.UpdateReply_Id(Settings, Log, DBCommand);
                     }
                 }
             }
@@ -96,7 +98,7 @@ namespace UTM_ExchangeLibrary
         {
             try 
             {
-                List<UTM> utmServers = UTMMapper.GetUTMServers(Settings, Log);
+                List<UTM> utmServers = UTMMapper.GetUTMServers(Settings, Log, DBCommand);
 
                 foreach (UTM u in utmServers)
                 {
@@ -115,7 +117,7 @@ namespace UTM_ExchangeLibrary
                         }
 
                         u.IsActive = isActive;
-                        u.SetUTMState(Settings, Log);
+                        u.SetUTMState(Settings, Log, DBCommand);
                     }
                     catch(Exception ex) 
                     {

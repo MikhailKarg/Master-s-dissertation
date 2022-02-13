@@ -1,6 +1,7 @@
 ﻿using System;
 using UTM_ExchangeLibrary.DB;
 using UTM_ExchangeLibrary.Interfaces;
+using UTM_ExchangeLibrary.Interfaces.AbstractClasses;
 
 namespace UTM_ExchangeLibrary
 {
@@ -9,11 +10,11 @@ namespace UTM_ExchangeLibrary
         public string IP { get; set; }
         public string TransferProtocol { get; set; }
         public byte IsActive { get; set; }
-        public void SetUTMState(IUTM_ServiceSettings serviceSettings, IUTM_Log log) 
+        public void SetUTMState(IUTM_ServiceSettings serviceSettings, IUTM_Log log, IUTM_DBCommand dbCommand) 
         {
-            SqlExpression = serviceSettings.GetServiceSetting("proc_SetUTMState");
+            string SqlExpression = "proc_SetUTMState";
 
-            IUTM_DBCommand SetUTMStateCommand = new UTM_SQLServerCommand();
+            IUTM_DBCommand SetUTMStateCommand = dbCommand;
 
             SetUTMStateCommand.BuildCommand(serviceSettings, SqlExpression, log);
             SetUTMStateCommand.AddCommandParameter("UTM_Id", Convert.ToString(Id));

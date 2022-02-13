@@ -12,7 +12,6 @@ namespace UTM_ExchangeLibrary
         private string Filename;
         private string Boundary;
         private HttpWebResponse httpWebResponse;
-        private IUTM_Log Log;
         public UTM_SendOperation(
             IUTM_Log log,
             int httpTimeout, 

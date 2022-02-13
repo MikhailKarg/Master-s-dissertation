@@ -10,8 +10,8 @@ namespace UTM_ExchangeUnitTests
     [TestClass]
     public class UTMMapperTest
     {
-        string logPath = @"D:\Documents\Study\Master-s-dissertation\App\UTM_Log";
-        string jsonSettingpath = @"D:\Documents\Study\Master-s-dissertation\App\UTM_ServiceSettings.json";
+        string logPath = @"";
+        string jsonSettingpath = @"";
 
         [TestMethod]
         public void UTM_LogTest()

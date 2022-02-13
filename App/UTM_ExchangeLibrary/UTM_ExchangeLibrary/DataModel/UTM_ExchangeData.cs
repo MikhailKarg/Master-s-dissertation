@@ -1,5 +1,4 @@
 ﻿using System;
-using UTM_ExchangeLibrary.DB;
 using UTM_ExchangeLibrary.Interfaces;
 
 namespace UTM_ExchangeLibrary
@@ -12,13 +11,11 @@ namespace UTM_ExchangeLibrary
         public string DataGUID { get; set; }
         public string ExchangeTypeCode { get; set; }
         public int UTM_Id { get; set; }
-        public void Insert(IUTM_ServiceSettings serviceSettings, IUTM_Log log) 
+        public void Insert(IUTM_ServiceSettings serviceSettings, IUTM_Log log, IUTM_DBCommand dbCommand) 
         {
-            ConnectionString = serviceSettings.GetServiceSetting("ConnectionString");
-            SqlExpression = serviceSettings.GetServiceSetting("proc_ExchangeDataInsert");
-            SqlCommandTimeout = Convert.ToInt32(serviceSettings.GetServiceSetting("SqlCommandTimeout"));
+            string SqlExpression = "proc_ExchangeDataInsert";
 
-            IUTM_DBCommand UTM_DataInsert = new UTM_SQLServerCommand();
+            IUTM_DBCommand UTM_DataInsert = dbCommand;
 
             UTM_DataInsert.BuildCommand(serviceSettings, SqlExpression, log);
             UTM_DataInsert.AddCommandParameter("ExchangeTypeCode", ExchangeTypeCode);
@@ -30,15 +27,13 @@ namespace UTM_ExchangeLibrary
 
             UTM_DataInsert.Exec();
         }
-        public void UpdateReply_Id(IUTM_ServiceSettings serviceSettings, IUTM_Log log) 
+        public void UpdateReply_Id(IUTM_ServiceSettings serviceSettings, IUTM_Log log, IUTM_DBCommand dbCommand) 
         {
-            ConnectionString = serviceSettings.GetServiceSetting("ConnectionString");
-            SqlExpression = serviceSettings.GetServiceSetting("proc_ExchangeDataUpdateReply");
-            SqlCommandTimeout = Convert.ToInt32(serviceSettings.GetServiceSetting("SqlCommandTimeout"));
+            string SqlExpression = "proc_ExchangeDataUpdateReply";
 
             string statusCode = serviceSettings.GetServiceSetting("SentStatusCode");
 
-            IUTM_DBCommand UTM_DataUpdateReply_Id = new UTM_SQLServerCommand();
+            IUTM_DBCommand UTM_DataUpdateReply_Id = dbCommand;
 
             UTM_DataUpdateReply_Id.BuildCommand(serviceSettings, SqlExpression, log);
             UTM_DataUpdateReply_Id.AddCommandParameter("ExchangeData_Id", Convert.ToString(Id));

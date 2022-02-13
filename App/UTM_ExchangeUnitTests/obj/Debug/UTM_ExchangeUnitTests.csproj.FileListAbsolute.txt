@@ -3,9 +3,6 @@ D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeUnitTests\obj\Debug\UTM
 D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeUnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeUnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeUnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeUnitTests\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
-D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeUnitTests\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
-D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeUnitTests\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
 D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeUnitTests\bin\Debug\UTM_ExchangeUnitTests.dll
 D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeUnitTests\bin\Debug\UTM_ExchangeUnitTests.pdb
 D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeUnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll

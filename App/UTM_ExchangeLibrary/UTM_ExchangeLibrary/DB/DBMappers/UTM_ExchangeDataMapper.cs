@@ -7,11 +7,11 @@ namespace UTM_ExchangeLibrary.DBMappers
 {
     public class UTM_ExchangeDataMapper
     {
-        public static List<UTM_ExchangeData> GetReadyUTM_Data(IUTM_ServiceSettings serviceSettings, int utm_id, IUTM_Log log)
+        public static List<UTM_ExchangeData> GetReadyUTM_Data(IUTM_ServiceSettings serviceSettings, int utm_id, IUTM_Log log, IUTM_DBCommand dbCommand)
         {
-            string sqlExpression = serviceSettings.GetServiceSetting("proc_GetReadyExchangeData");
+            string sqlExpression = "proc_GetReadyExchangeData";
 
-            IUTM_DBCommand GetReadyUTM_DataCommand = new UTM_SQLServerCommand();
+            IUTM_DBCommand GetReadyUTM_DataCommand = dbCommand;
 
             GetReadyUTM_DataCommand.BuildCommand(serviceSettings, sqlExpression, log);
             GetReadyUTM_DataCommand.AddCommandParameter("UTM_Id", Convert.ToString(utm_id));

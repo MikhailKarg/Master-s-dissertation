@@ -35,4 +35,3 @@ D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeConsoleApp\bin\Debug\Sy
 D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeConsoleApp\bin\Debug\System.Security.AccessControl.xml
 D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeConsoleApp\bin\Debug\System.Security.Permissions.xml
 D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeConsoleApp\bin\Debug\System.Security.Principal.Windows.xml
-D:\Documents\Study\Master-s-dissertation\App\UTM_ExchangeConsoleApp\obj\Debug\UTM_ExchangeConsoleApp.csprojAssemblyReference.cache

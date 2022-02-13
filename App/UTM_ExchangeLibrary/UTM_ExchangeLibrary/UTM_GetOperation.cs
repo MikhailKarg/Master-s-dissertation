@@ -8,7 +8,6 @@ namespace UTM_ExchangeLibrary
 {
     public class UTM_GetOperation : UTM_HttpOperation
     {
-        private IUTM_Log Log;
         public UTM_GetOperation(
             IUTM_Log log,
             int HTTPTimeout, 
